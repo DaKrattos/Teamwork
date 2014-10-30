@@ -11,7 +11,7 @@
 		<ul class="title-area">
 			<li class="name">
 				<h1>
-					{{ HTML::linkAction('posts.index','Micropost') }}
+				{{ HTML::linkAction('tasks.index','Teamwork') }}
 				</h1>
 			</li>
 			<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
@@ -23,7 +23,10 @@
 			<!-- Left Nav Section -->
 			<ul class="left">
 				<li>
-					{{ HTML::linkAction('posts.index','Posts') }}
+					{{ HTML::linkAction('tasks.index','Tasks') }}
+				</li>
+				<li>
+					{{ HTML::linkAction('members.index','Members') }}
 				</li>
 			</ul>
 		</section>
