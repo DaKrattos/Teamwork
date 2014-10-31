@@ -4,7 +4,11 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Teamwork</title>
+	{{ HTML::script('bower_components/jquery/dist/jquery.js') }}
+	{{ HTML::script('bower_components/foundation/js/foundation.min.js') }}
 	{{ HTML::style('bower_components/foundation/css/foundation.css') }}
+	{{ HTML::script('bootstrap-datepicker/bootstrap-datepicker.js') }}
+	{{ HTML::style('bootstrap-datepicker/datepicker3.css') }}
 </head>
 <body>
 	<nav class="top-bar" data-topbar role="navigation">
@@ -37,8 +41,7 @@
 			@yield('content')
 		</div>
 	</div>
-	{{ HTML::script('bower_components/jquery/dist/jquery.js') }}
-	{{ HTML::script('bower_components/foundation/js/foundation.min.js') }}
+	
 	<script>
 		$(document).foundation();
 	</script>

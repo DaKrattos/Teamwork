@@ -21,7 +21,8 @@ class TasksController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('tasks.create');
+		$members = Member::lists('firstname','id');
+		return View::make('tasks.create', compact('members'));
 	}
 
 	/**
@@ -65,8 +66,9 @@ class TasksController extends \BaseController {
 	public function edit($id)
 	{
 		$task = Task::find($id);
+		$members = Member::lists('firstname','id');
 
-		return View::make('tasks.edit', compact('task'));
+		return View::make('tasks.edit', compact('task','members'));
 	}
 
 	/**
