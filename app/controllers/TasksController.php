@@ -10,9 +10,9 @@ class TasksController extends \BaseController {
 	public function index()
 	{
 		$tasks = Task::all();
-
 		return View::make('tasks.index', compact('tasks'));
 	}
+
 
 	/**
 	 * Show the form for creating a new task

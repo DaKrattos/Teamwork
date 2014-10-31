@@ -13,8 +13,13 @@
 
 Route::get('/', function()
 {
-	return View::make('layouts.default');
+	$ctasks = Task::where('completed',true)->get();
+	$dtasks = Task::where('completed',false)->orderBy('finalDate', 'asc')->get();
+
+	return View::make('layouts.index', compact('ctasks','dtasks'));
+	//return View::make('layouts.default');
 });
+
 
 Route::resource('members', 'MembersController');
 
